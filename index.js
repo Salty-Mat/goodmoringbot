@@ -28,3 +28,7 @@ const job = schedule.scheduleJob({hour:6 , minute: 0}, () => {
 });
 
 
+async function saveCountToFile() {
+    fs.writeFileSync(countPath, count.toString());
+}
+
