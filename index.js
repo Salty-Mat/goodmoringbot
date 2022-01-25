@@ -26,7 +26,7 @@ const job = schedule.scheduleJob({hour:6 , minute: 0}, () => {
 	saveCountToFile();
 	console.log('webhook sent');
 });
-
+console.log('Bot is running');
 
 async function saveCountToFile() {
     fs.writeFileSync(countPath, count.toString());
