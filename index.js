@@ -27,6 +27,7 @@ const job = schedule.scheduleJob({hour:6 , minute: 0}, () => {
 	console.log('webhook sent');
 });
 console.log('OMEGALUL');
+console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 
 async function saveCountToFile() {
     fs.writeFileSync(countPath, count.toString());
