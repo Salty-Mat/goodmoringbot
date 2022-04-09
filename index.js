@@ -21,7 +21,7 @@ if (fs.existsSync(countPath)) {
 const webhookClient = new WebhookClient({ url: config.webhookUrl });
 
 const job = schedule.scheduleJob({hour:6 , minute: 0}, () => {
-	webhookClient.send(`***__Good Morning__*** its **6** AM in pacific time **|** **${count}** days till spring break`);
+	webhookClient.send(`***__Good Morning__*** its **6** AM in pacific time **|** **${count}** days till summer break.`);
 	count--;
 	saveCountToFile();
 	console.log('webhook sent');
