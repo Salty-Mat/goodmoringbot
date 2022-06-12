@@ -30,7 +30,7 @@ if (fs.existsSync(countPath)) {
 	}
 } else console.log('Failed to load the chair count because the file was not found');
 
-const job = schedule.scheduleJob({ hour: 1 }, async (date) => {
+const job = schedule.scheduleJob({ hour: 6, minute: 0 }, async (date) => {
 
 	const currentWeather = await weather.getAllWeather()
 
