@@ -37,7 +37,6 @@ const job = schedule.scheduleJob({ hour: 6, minute: 0 }, async (date) => {
 	const exampleEmbed = new MessageEmbed()
 		.setColor('#0099ff')
 		.setTitle(`${currentWeather.weather[0].main}  ${getIcon(currentWeather.weather[0].main)} `)
-		//.setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/AfFp7pu.png', url: 'https://discord.js.org' })
 		.setDescription(`**curent temp**: ${Math.round(currentWeather.main.temp)} ℉ `)
 		.addField('forecast:', `${Math.round(currentWeather.main.temp_min)}°<:3263_Blank:985411059475152916>${getTempRange(currentWeather.main.temp_min, currentWeather.main.temp_max)}<:3263_Blank:985411059475152916>**${Math.round(currentWeather.main.temp_max)}°**`)
 		.setTimestamp()
