@@ -30,7 +30,7 @@ if (fs.existsSync(countPath)) {
 	}
 } else console.log('Failed to load the chair count because the file was not found');
 
-const job = schedule.scheduleJob({ hour: 6, minute: 0 }, async (date) => {
+const job = schedule.scheduleJob({ hour: 8, minute: 0 }, async (date) => {
 
 	const currentWeather = await weather.getAllWeather()
 
@@ -43,9 +43,9 @@ const job = schedule.scheduleJob({ hour: 6, minute: 0 }, async (date) => {
 		.setFooter({ text: 'dm mat if broke' });
 
 	if (date.getDay() % 2 == 0) {
-		webhookClient.send({ content: `***__GOODMORING__*** its **6** AM in pacific time **|** today's **weather**:`, embeds: [exampleEmbed] });
+		webhookClient.send({ content: `***__GOODMORING__*** its **8** AM in pacific time **|** today's **weather**:`, embeds: [exampleEmbed] });
 	} else {
-		webhookClient.send({ content: `***__Good Morning__*** its **6** AM in pacific time **|** today's **weather**:`, embeds: [exampleEmbed] });
+		webhookClient.send({ content: `***__Good Morning__*** its **8** AM in pacific time **|** today's **weather**:`, embeds: [exampleEmbed] });
 	}
 
 	count--;
